@@ -56,6 +56,7 @@ function checkLetter(button){
 qwerty.addEventListener('click', (e) => {
     if(e.target.tagName === "BUTTON"){
         e.target.classList.add("chosen");
+        e.target.setAttribute('disabled', ' ');
         let btn = e.target.textContent;
         let letter = checkLetter(btn);
 
