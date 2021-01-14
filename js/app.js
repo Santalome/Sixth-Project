@@ -15,20 +15,6 @@ const phrases = [
     "tesla"
 ];
 
-
-
-btnReset.addEventListener('click', () => {
-    let overlay = document.getElementById('overlay');
-    if(playAgain == false){
-        overlay.style.display = 'none';
-    }else if(playAgain === true){
-        overlay.style.display = 'start';
-        playAgain = false;
-    }
-
-});
-
-
 btnReset.addEventListener('click', () => {
     let overlay = document.getElementById('overlay');
     overlay.style.display = 'none';
