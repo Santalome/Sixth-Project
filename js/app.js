@@ -19,7 +19,13 @@ const phrases = [
 
 btnReset.addEventListener('click', () => {
     let overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
+    if(playAgain == false){
+        overlay.style.display = 'none';
+    }else if(playAgain === true){
+        overlay.style.display = 'start';
+        playAgain = false;
+    }
+
 });
 
 
