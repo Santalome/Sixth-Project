@@ -2,7 +2,6 @@ const qwerty = document.getElementById('qwerty');
 const phrase = document.getElementById('phrase');
 const btnReset = document.querySelector('.btn__reset');
 let missed = 0;
-var playAgain = false;
 
 const phrases = [
     "honda",
@@ -63,12 +62,12 @@ qwerty.addEventListener('click', (e) => {
 
         if(btn != letter){
             let heart = document.querySelectorAll('.tries img');
-            let source = "images/lostHearth.png";
+            let source = "./images/lostHeart.png";
             heart[missed].src = source;
             missed ++;
         }
     }
-    checkWin();
+    checkWin(); 
 });
 
 function checkWin(){
@@ -80,13 +79,11 @@ function checkWin(){
         overlay.className = "win";
         headLine.textContent = "You win !";
         overlay.style.display = 'flex';
-        btnReset.textContent = "Play Again";
-        playAgain = true;
+        btnReset.style.display = 'none';
     }else if(missed > 4){
         overlay.className = "lose";
         headLine.textContent = "You lose !";
         overlay.style.display = 'flex';
-        btnReset.textContent = "Try Again";
-        playAgain = true;
+        btnReset.style.display = 'none';
     }
 }
